@@ -1,0 +1,23 @@
+$color-yellow: hsl(51, 100%, 49%);
+$color-soft-red: hsl(7, 99%, 70%);
+$color-light-blue: hsl(200, 99%, 72%);
+$color-blue: hsl(200, 100%, 62%);
+$color-dark-blue: hsl(198, 62%, 26%);
+$color-light-cyan: hsl(168, 44%, 70%);
+$color-dark-moderate-cyan: hsl(168, 34%, 41%);
+$color-dark-desaturated-cyan: hsl(167, 40%, 24%);
+
+$color-very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$color-very-dark-grayish-blue: hsl(213, 9%, 39%);
+$color-dark-grayish-blue: hsl(232, 10%, 55%);
+$color-grayish-blue: hsl(210, 4%, 67%);
+$color-white: hsl(0, 0%, 100%);
+
+$filter-color-dark-cyan: invert(41%) sepia(13%) saturate(1458%) hue-rotate(118deg) brightness(92%)
+  contrast(97%);
+
+$font-family-barlow: 'Barlow', sans-serif;
+$font-family-fraunces: 'Fraunces', serif;
+
+$font-sans-serif: $font-family-barlow;
+$font-serif: $font-family-fraunces;

@@ -1,0 +1,79 @@
+@use "../abstracts/animations";
+@use "../base/variables";
+@use "../abstracts/breakpoints";
+
+.nav {
+  &-list {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  &-link {
+    @extend %transition;
+
+    &:hover {
+      color: darken(variables.$color-white, 25%);
+    }
+  }
+
+  @include breakpoints.media("<medium") {
+    z-index: 1000;
+
+    transition: animations.$transition-default;
+    transition-property: visibility, opacity;
+
+    &[data-expanded="false"] {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &[data-expanded="true"] {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &-list {
+      flex-direction: column;
+      justify-content: center;
+
+      gap: 2em;
+
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+
+      height: 329px;
+
+      background-color: variables.$color-white;
+
+      position: fixed;
+      top: 106px;
+      left: 0;
+      right: 0;
+
+      &::after {
+        content: "";
+
+        width: 0;
+        height: 0;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(-100%);
+
+        border-style: solid;
+        border-width: 0 0 24px 24px;
+        border-color: transparent transparent variables.$color-white;
+      }
+    }
+  }
+
+  @include breakpoints.media(">small", "<medium") {
+    &-list {
+      margin-left: 2.5rem;
+      margin-right: 3rem;
+    }
+  }
+}
