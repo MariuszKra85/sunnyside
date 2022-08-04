@@ -25,3 +25,32 @@ body {
 
   background-color: variables.$color-blue;
 }
+main {
+  background-color: variables.$color-white;
+}
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@include breakpoints.media(">=x-large") {
+  html {
+    font-size: clamp(1em, 1em + 2vw, 2.5em);
+  }
+}

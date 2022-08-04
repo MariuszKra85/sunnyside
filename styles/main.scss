@@ -3,3 +3,7 @@
 @use "components/hamburger";
 @use "components/nav";
 @use "layout/header";
+@use "components/contactButton";
+@use "./layout/grid.scss";
+@use "./components/gallery";
+@use "./components/testimonials";

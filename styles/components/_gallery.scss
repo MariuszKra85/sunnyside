@@ -1,0 +1,29 @@
+@use "../abstracts/breakpoints";
+.gallery {
+  &-mobile {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-image {
+    width: 50vw;
+  }
+
+  &-desktop {
+    display: none;
+  }
+
+  @include breakpoints.media(">small") {
+    &-desktop {
+      display: flex;
+    }
+
+    &-image {
+      width: 25vw;
+    }
+
+    &-mobile {
+      display: none;
+    }
+  }
+}

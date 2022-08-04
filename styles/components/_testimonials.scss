@@ -1,0 +1,123 @@
+@use "../abstracts/animations";
+@use "../abstracts/breakpoints";
+@use "../base/variables";
+
+.testimonials {
+  padding-top: 4rem;
+  padding-bottom: 5.375rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  &-heading {
+    margin-bottom: 4em;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-family: variables.$font-serif;
+    font-weight: 900;
+    color: variables.$color-grayish-blue;
+
+    font-size: 1rem;
+    letter-spacing: 4px;
+  }
+
+  &-paragraph {
+    text-align: center;
+    font-family: variables.$font-sans-serif;
+    font-weight: 600;
+    color: variables.$color-very-dark-grayish-blue;
+
+    font-size: 1.125rem;
+    line-height: 2rem;
+    letter-spacing: -0.13px;
+  }
+
+  &-author-name {
+    text-align: center;
+    font-family: variables.$font-serif;
+    font-weight: 900;
+    color: variables.$color-very-dark-desaturated-blue;
+
+    font-size: 1.125rem;
+    letter-spacing: -0.13px;
+  }
+
+  &-author-job {
+    text-align: center;
+    font-family: variables.$font-sans-serif;
+    font-weight: 600;
+    color: variables.$color-grayish-blue;
+
+    font-size: 0.875rem;
+    letter-spacing: -0.1px;
+    line-height: 1.5625rem;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4em;
+  }
+  &-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 2em;
+  }
+  &-image {
+    cursor: pointer;
+    width: 4.5rem;
+    height: auto;
+
+    border-radius: 50%;
+
+    @extend %transition;
+
+    &:hover {
+      transform: scale(1.25);
+    }
+  }
+
+  &-author-job {
+    margin-top: 0.5625rem;
+  }
+
+  @include breakpoints.media(">small") {
+    &-heading {
+      font-size: 1.125rem;
+      letter-spacing: 4.5px;
+    }
+
+    &-card {
+      max-width: 21.875rem;
+      gap: 3.625rem;
+    }
+  }
+
+  @include breakpoints.media(">medium") {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+
+    &-heading {
+      margin-bottom: 5.0625rem;
+
+      font-size: 1.25rem;
+      letter-spacing: 5px;
+    }
+
+    &-container {
+      flex-direction: row;
+      justify-content: center;
+
+      gap: 1.875rem;
+    }
+
+    &-author {
+      margin-top: 0.6875rem;
+      margin-right: 1.5ch;
+    }
+  }
+}

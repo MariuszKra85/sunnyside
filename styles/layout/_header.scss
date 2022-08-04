@@ -1,4 +1,5 @@
 @use "../abstracts/breakpoints";
+@use "../base/variables";
 
 .header {
   width: 100%;
@@ -42,6 +43,23 @@
   &-heading {
     margin-top: 5.5rem;
     margin-bottom: 3.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: variables.$font-serif;
+    font-weight: 900;
+    color: variables.$color-white;
+
+    font-size: 2.5rem;
+    letter-spacing: 6.25px;
+
+    @include breakpoints.media(">medium") {
+      font-size: 3rem;
+      letter-spacing: 7.5px;
+    }
+    @include breakpoints.media(">large") {
+      font-size: 3.5rem;
+      letter-spacing: 8.75px;
+    }
   }
 
   &-arrow-link {

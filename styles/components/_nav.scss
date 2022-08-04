@@ -13,6 +13,24 @@
   &-link {
     @extend %transition;
 
+    text-decoration: none;
+    font-family: variables.$font-sans-serif;
+    font-weight: 600;
+    line-height: 1.5625rem;
+
+    color: variables.$color-dark-grayish-blue;
+    font-size: 1.25rem;
+    letter-spacing: -0.14px;
+
+    @include breakpoints.media(">medium") {
+      color: variables.$color-white;
+      font-size: 1.1875rem;
+    }
+    @include breakpoints.media(">large") {
+      font-size: 1.125rem;
+      letter-spacing: -0.13px;
+    }
+
     &:hover {
       color: darken(variables.$color-white, 25%);
     }
